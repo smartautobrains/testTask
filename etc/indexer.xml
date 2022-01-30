@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @category    Smartautobrains
+ * @package     TestTask
+ * @author      P.Kushnerevich <pkushnerevich@smartautobrains.com>
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @copyright   Copyright (c) 2022 Smartautobrains (https://smartautobrains.com/)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Indexer/etc/indexer.xsd">
+    <indexer id="configurable_product_price_range" view_id="configurable_product_price_range" class="Smartautobrains\TestTask\Model\Indexer\Product\Configurable\PlpData">
+        <title translate="true">Configurable Product Price</title>
+        <description translate="true">Index configurable product prices range</description>
+    </indexer>
+</config>

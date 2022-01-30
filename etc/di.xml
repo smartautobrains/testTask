@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Smartautobrains
+ * @package     TestTask
+ * @author      P.Kushnerevich <pkushnerevich@smartautobrains.com>
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @copyright   Copyright (c) 2022 Smartautobrains (https://smartautobrains.com/)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Smartautobrains\TestTask\Model\Indexer\Product\Configurable\Processor">
+        <arguments>
+            <argument name="indexer" xsi:type="object" shared="false">Magento\Framework\Indexer\IndexerInterface</argument>
+        </arguments>
+    </type>
+    <type name="Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable">
+        <plugin name="update_plp" type="Smartautobrains\TestTask\Plugin\Model\ResourceModel\Product\Type\ConfigurablePlugin"/>
+    </type>
+    <type name="Magento\Catalog\Controller\Adminhtml\Product\MassStatus">
+        <plugin name="mass_update_plp" type="Smartautobrains\TestTask\Plugin\Controller\Adminhtml\Product\MassStatusPlugin"/>
+    </type>
+</config>
